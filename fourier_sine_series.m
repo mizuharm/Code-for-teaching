@@ -1,5 +1,17 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Fourier sine series
+%
+% Visualize Fourier sine series approximation
+% of a given function
+%
+%
+%
+% Author: Matthew S. Mizuhara
+% E-mail: mizuharm@tcnj.edu
+% Institution: The College of New Jersey
+% Date Created: October 2020
+%
+%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

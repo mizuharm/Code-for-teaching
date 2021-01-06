@@ -9,6 +9,13 @@
 %
 %   Method: Forward time, centered space finite differences
 %
+%
+%
+% Author: Matthew S. Mizuhara
+% E-mail: mizuharm@tcnj.edu
+% Institution: The College of New Jersey
+% Date Created: Sep 2020
+%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%

@@ -10,7 +10,11 @@
 %   1. Plot Bessel function J_0
 %   2. Use Bessel function orthogonal expansion
 %       to solve equation.
-%
+
+% Author: Matthew S. Mizuhara
+% E-mail: mizuharm@tcnj.edu
+% Institution: The College of New Jersey
+% Date Created: September 2020
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
     clear

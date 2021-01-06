@@ -7,12 +7,18 @@
 %   3. Truncate in the frequency space to get a ``compressed'' file
 %   4. Use iFFT to plot and listen to compressed trumpet sound 
 %
-%   Data from:
+%   Trumpet audio data from:
 %   University Of Washington Dept. of Electrical Engineering, 
 %   Fourier Series and Gibbs Phenomenon. 
 %   OpenStax CNX. Oct 25, 2008 
 %   http://cnx.org/contents/8ef92951-be1e-40f4-a50a-a307785a0608@21. 
 %
+%
+%
+% Author: Matthew S. Mizuhara
+% E-mail: mizuharm@tcnj.edu
+% Institution: The College of New Jersey
+% Date Created: October 2020
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 

@@ -1,5 +1,18 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Fourier cosine series
+%
+% Visualize approximations of a given function
+% using Fourier cosine series
+%
+%
+% Author: Matthew S. Mizuhara
+% E-mail: mizuharm@tcnj.edu
+% Institution: The College of New Jersey
+% Date Created: October 2020
+%
+%
+%
+%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

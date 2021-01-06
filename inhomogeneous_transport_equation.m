@@ -9,6 +9,14 @@
 %   Simply use explicit solution
 %   u(x,t) = g(x-Ct) + int_0^t f(x+C(z-t),z)dz
 %
+%
+%
+% Author: Matthew S. Mizuhara
+% E-mail: mizuharm@tcnj.edu
+% Institution: The College of New Jersey
+% Date Created: August 2020
+%
+%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%
