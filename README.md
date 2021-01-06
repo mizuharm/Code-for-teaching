@@ -1,9 +1,8 @@
-# Code for teaching
- Codes used for class demonstrations
+# Teaching
+ Codes used for class demonstrations, other fun projects
 
-## Summary
+## Codes
     direction_field.m
 
-    MATLAB code to create direction fields and sample trajectories
+    *Summary:* MATLAB code to create direction fields and sample trajectories
 
-    
