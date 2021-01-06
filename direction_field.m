@@ -5,12 +5,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 %
-% Author: Matthew S. Mizuhara
-% E-mail: mizuharm@tcnj.edu
-% Institution: The College of New Jersey
-% Date Created: March 2020
-%
-%
 % This program allows you to plot slope fields
 % and sample trajectories from a specified initial
 % condition. Once a slope field is plotted, trajectories
@@ -18,6 +12,13 @@
 % itself, or by using the GUI interface. Trajectories can
 % be extended forward in time, backward in time, or
 % in both directions. 
+%
+%
+%
+% Author: Matthew S. Mizuhara
+% E-mail: mizuharm@tcnj.edu
+% Institution: The College of New Jersey
+% Date Created: March 2020
 %
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
