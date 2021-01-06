@@ -42,3 +42,8 @@
    
     trumpet.mat
     Trumpet audio data
+   
+## Other
+
+    calculate_pi_mc.m
+    Use Monte Carlo simulation to approximate pi
