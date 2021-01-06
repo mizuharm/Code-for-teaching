@@ -3,7 +3,5 @@
 
 ## Codes
     direction_field.m
-
-### Summary: 
     MATLAB code to create direction fields and sample trajectories
 
