@@ -1,6 +1,13 @@
 # Teaching
  Codes used for class demonstrations, other fun projects
 
+## MAT 205 (Linear Algebra)
+
+    replace.m
+    swap.m
+    scale.m
+    Codes to practice elementary row operations
+
 ## MAT 326 (Differential Equations)
 
     direction_field.m
