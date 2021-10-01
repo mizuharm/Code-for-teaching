@@ -7,6 +7,10 @@
     swap.m
     scale.m
     Codes to practice elementary row operations
+    
+    visualize_transformation.m
+    Visualize effects of 2D linear transformation
+    of user defined matrix
 
 ## MAT 326 (Differential Equations)
 
