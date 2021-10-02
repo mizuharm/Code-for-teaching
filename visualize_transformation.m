@@ -1,10 +1,17 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Visualization of linear transformations in 2D
-%%
-%%
-%% User inputs 2 x 2 matrix of a linear transformation,
-%% and the program shows the image of the standard basis vectors
-%% along with grid lines under the transformation
+%
+%
+% User inputs 2 x 2 matrix of a linear transformation,
+% and the program shows the image of the standard basis vectors
+% along with grid lines under the transformation
+%
+%
+% Written by Matthew S. Mizuhara
+%            The College of New Jersey
+%            October 2, 2021
+%
+% 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
@@ -32,13 +39,6 @@ function visualize_transformation()
         set(fig2, 'ToolBar', 'none');
         set(gcf,'Position',[600 100 600 500])
         
-        %Parameters for "movie"
-        A = [1 0 ; 0 1]; %Default matrix
-        dt = .01;  %Default timestep
-        tend = 1; %Endtime
-
-        t_vec = 0:dt:tend; %vector of timesteps
-
 
         %Plot the standard basis vectors and grid
         plot_vectors_and_grid_lines([1;0],[0;1])
@@ -178,14 +178,14 @@ function visualize_transformation()
                     str = h7.String;
 
                     if strcmp(str{val},'Slow') 
-                        dt = .01;           
-                        t_vec = 0:dt:tend; %vector of timesteps
+                        dt = .02;           
+                        t_vec = 0:dt:1; %vector of timesteps
                     elseif strcmp(str{val},'Medium') 
                         dt = .05;
-                        t_vec = 0:dt:tend; %vector of timesteps
+                        t_vec = 0:dt:1; %vector of timesteps
                     elseif strcmp(str{val},'Fast') 
                         dt = .1;
-                        t_vec = 0:dt:tend; %vector of timesteps
+                        t_vec = 0:dt:1; %vector of timesteps
                     end
                 
                 %User defined matrix
