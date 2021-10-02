@@ -93,20 +93,21 @@ function visualize_transformation()
             
             
             %Progress bar
+                        
             hh3=uicontrol(fig,'Style','text');
             hh3.String = 'Id';
             hh3.FontSize =12;
-            hh3.Position= [0 120 30 40];
+            hh3.Position= [30 100 30 40];
 
             hh4=uicontrol(fig,'Style','text');
             hh4.String = 'A';
             hh4.FontSize =12;
-            hh4.Position= [70 120 30 40];
+            hh4.Position= [100 100 30 40];
 
             hh5=uicontrol(fig,'Style','text');
-            hh5.String = '*';
+            hh5.String = '^';
             hh5.FontSize =12;
-            hh5.Position= [0 115 30 20];   
+            hh5.Position= [30 95 30 20];   
 
             %Reset button
             h6 = uicontrol(fig,'Style','pushbutton');
@@ -114,6 +115,21 @@ function visualize_transformation()
             h6.String = {'Reset'};
             h6.Callback = @reset_plot;
             h6.FontSize =12;
+            
+            %Movie speed
+            
+            hh8=uicontrol(fig,'Style','text');
+            hh8.String = 'Transformation speed:';
+            hh8.FontSize =10;
+            hh8.Position= [30 20 100 40];
+            
+            h7 = uicontrol(fig,'Style','popupmenu');
+            h7.Position = [140 30 100 20];
+            h7.String = {'Slow','Medium','Fast'};
+            h7.Value = 2;
+            
+                  
+                
 
         %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
         %% Functions for the transformation GUI
@@ -156,6 +172,21 @@ function visualize_transformation()
             %Creates a "movie" of the transformation
             %Starts from identity and continuously deforms
             %to the matrix A
+            
+                    %Determine movie speed from dropdown menu
+                    val = h7.Value;
+                    str = h7.String;
+
+                    if strcmp(str{val},'Slow') 
+                        dt = .01;           
+                        t_vec = 0:dt:tend; %vector of timesteps
+                    elseif strcmp(str{val},'Medium') 
+                        dt = .05;
+                        t_vec = 0:dt:tend; %vector of timesteps
+                    elseif strcmp(str{val},'Fast') 
+                        dt = .1;
+                        t_vec = 0:dt:tend; %vector of timesteps
+                    end
                 
                 %User defined matrix
                 A = [str2num(h1.String),str2num(h2.String);...
@@ -172,20 +203,21 @@ function visualize_transformation()
 
                     
                     %Update the GUI progress bar
-                    hh3=uicontrol(fig,'Style','text');
-                    hh3.String = 'Id';
-                    hh3.FontSize =12;
-                    hh3.Position= [0 120 30 40];
-                    
-                    hh4=uicontrol(fig,'Style','text');
-                    hh4.String = 'A';
-                    hh4.FontSize =12;
-                    hh4.Position= [70 120 30 40];
-                    
-                    hh5=uicontrol(fig,'Style','text');
-                    hh5.String = '*';
-                    hh5.FontSize =12;
-                    hh5.Position= [70*t_vec(i) 115 30 20];   
+                      %Progress bar
+                        hh3=uicontrol(fig,'Style','text');
+                        hh3.String = 'Id';
+                        hh3.FontSize =12;
+                        hh3.Position= [30 100 30 40];
+
+                        hh4=uicontrol(fig,'Style','text');
+                        hh4.String = 'A';
+                        hh4.FontSize =12;
+                        hh4.Position= [100 100 30 40];
+
+                        hh5=uicontrol(fig,'Style','text');
+                        hh5.String = '^';
+                        hh5.FontSize =12;
+                        hh5.Position= [30+70*t 95 30 20];   
                     
                     pause(.01)
                     
@@ -243,21 +275,29 @@ function visualize_transformation()
             h5.Callback = @show_transformation;
             h5.FontSize =12;
             
-            
+            %Progress bar
+                        
             hh3=uicontrol(fig,'Style','text');
             hh3.String = 'Id';
             hh3.FontSize =12;
-            hh3.Position= [0 120 30 40];
+            hh3.Position= [30 100 30 40];
 
             hh4=uicontrol(fig,'Style','text');
             hh4.String = 'A';
             hh4.FontSize =12;
-            hh4.Position= [70 120 30 40];
+            hh4.Position= [100 100 30 40];
 
             hh5=uicontrol(fig,'Style','text');
-            hh5.String = '*';
+            hh5.String = '^';
             hh5.FontSize =12;
-            hh5.Position= [0 115 30 20];   
+            hh5.Position= [30 95 30 20];   
+
+            %Reset button
+            h6 = uicontrol(fig,'Style','pushbutton');
+            h6.Position= [300 120 160 40];
+            h6.String = {'Reset'};
+            h6.Callback = @reset_plot;
+            h6.FontSize =12;
 
         %Reset button
             h6 = uicontrol(fig,'Style','pushbutton');
@@ -265,6 +305,21 @@ function visualize_transformation()
             h6.String = {'Reset'};
             h6.Callback = @reset_plot;
             h6.FontSize =12;
+              
+            %Movie speed
+            
+            hh8=uicontrol(fig,'Style','text');
+            hh8.String = 'Transformation speed:';
+            hh8.FontSize =10;
+            hh8.Position= [30 20 100 40];
+            
+            h7 = uicontrol(fig,'Style','popupmenu');
+            h7.Position = [140 30 100 20];
+            h7.String = {'Slow','Medium','Fast'};
+            h7.Value = 2;
+            %h7.Callback = @selection;
     end
+
+           
 
 end
