@@ -11,6 +11,10 @@
     visualize_transformation.m
     Visualize effects of 2D linear transformation
     of user defined matrix
+    
+    visualize_eigenvectors.m
+    Visualize images of vectors under 2x2 matrix
+    transformation
 
 ## MAT 326 (Differential Equations)
 
