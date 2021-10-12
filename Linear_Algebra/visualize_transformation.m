@@ -161,8 +161,8 @@ function visualize_transformation()
             end
 
             %Plot  vectors
-            quiver(0,0,x(1),x(2),'LineWidth',2)
-            quiver(0,0,y(1),y(2),'LineWidth',2)
+            quiver(0,0,x(1),x(2),0,'LineWidth',2)
+            quiver(0,0,y(1),y(2),0,'LineWidth',2)
 
             a=gca;
             a.FontSize = 16;
