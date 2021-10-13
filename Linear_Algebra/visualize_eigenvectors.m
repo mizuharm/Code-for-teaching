@@ -137,7 +137,7 @@ function visualize_eigenvectors()
                         plot_circles()                
                         hold off
                         format_plot()
-                        title(gca, ['$(X_1,X_2) = ($', num2str(pt(1)), ', ',num2str(pt(2)), '$)$'],'interpreter','latex');
+                        title(gca, ['${\bf x} = ($', num2str(pt(1)), ', ',num2str(pt(2)), '$),\;\; A{\bf x}=($', num2str(img(1)), ', ',num2str(img(2)), '$)$'],'interpreter','latex');
 
             end
             
@@ -156,8 +156,8 @@ function visualize_eigenvectors()
         
             function format_plot()
                 axis([-3 3 -3 3])
-                xlabel('$X_1$','interpreter','latex')
-                ylabel('$X_2$','interpreter','latex')
+                xlabel('$x_1$','interpreter','latex')
+                ylabel('$x_2$','interpreter','latex')
                 set(gca,'FontSize',14)
                      
             end
