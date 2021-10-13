@@ -42,13 +42,17 @@ function visualize_eigenvectors()
 
         %Make plot figure and set dimensions
         fig2 = figure('Name','','NumberTitle','off');
+        gca;
+        fig2axes = fig2.CurrentAxes;
         set(fig2, 'MenuBar', 'none');
         set(fig2, 'ToolBar', 'none');
         set(fig2,'Position',[600 100 600 500])
         set(fig2, 'WindowButtonMotionFcn', @mouseMove);
         title('Move your cursor on the plane to visualize inputs and outputs',...
             'interpreter','latex')
+        hold on
         plot_circles()
+        hold off
         format_plot()
                   
 
@@ -112,28 +116,37 @@ function visualize_eigenvectors()
 
                         close(fig2)
                         fig2 = figure('Name','','NumberTitle','off');
+                        gca;
+                        fig2axes = fig2.CurrentAxes;
                         set(fig2, 'MenuBar', 'none');
                         set(fig2, 'ToolBar', 'none');
                         set(fig2,'Position',[600 100 600 500])
                         set(fig2, 'WindowButtonMotionFcn', @mouseMove);
                         title('Move your cursor on the plane to visualize inputs and outputs',...
                         'interpreter','latex')
+                        hold on
                         plot_circles()
+                        hold off
                         format_plot()
                         
             end
          
             function mouseMove (~,~)
             %from https://www.mathworks.com/matlabcentral/answers/97563-how-do-i-continuously-read-the-mouse-position-as-the-mouse-is-moving-without-a-click-event
-            
-                        C = get(gca, 'CurrentPoint');
+                        
+                        C = get(fig2axes, 'CurrentPoint');
                         pt = [round(C(1,1),2);round(C(1,2),2)];
                         img = A*pt;
-                        pause(0)
-                        clf
+                        %fig2;
+                        clf(fig2);
+                        axes(fig2);
+                        fig2axes = fig2.CurrentAxes;
+                        if gcf == fig  %if wrong figure is clicked, change figure to plane
+                            figure(2)
+                        end
                         hold on
-                        quiver(0,0,pt(1),pt(2),0,'LineWidth',2)
-                        quiver(0,0,img(1),img(2),0,'LineWidth',2)
+                        quiver(fig2axes,0,0,pt(1),pt(2),0,'LineWidth',2)
+                        quiver(fig2axes,0,0,img(1),img(2),0,'LineWidth',2)
                         plot_circles()                
                         hold off
                         format_plot()
@@ -147,18 +160,20 @@ function visualize_eigenvectors()
             %%%%%%%%%%%%%%%%%%%%%%%%%%
             
             function plot_circles()
-                hold on
-                plot(cos(theta_vec),sin(theta_vec),'b--')
-                plot(2*cos(theta_vec),2*sin(theta_vec),'b--')
-                plot(3*cos(theta_vec),3*sin(theta_vec),'b--')
-                hold off
+                plot(fig2axes,cos(theta_vec),sin(theta_vec),'b--')
+                plot(fig2axes,2*cos(theta_vec),2*sin(theta_vec),'b--')
+                plot(fig2axes,3*cos(theta_vec),3*sin(theta_vec),'b--')
+
             end
         
+            %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+            %% Format plane for visualization
+            %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
             function format_plot()
                 axis([-3 3 -3 3])
                 xlabel('$x_1$','interpreter','latex')
                 ylabel('$x_2$','interpreter','latex')
-                set(gca,'FontSize',14)
+                set(fig2axes,'FontSize',14)
                      
             end
 end
