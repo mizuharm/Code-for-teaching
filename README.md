@@ -1,6 +1,10 @@
 # Teaching
  Codes used for class demonstrations, other fun projects
 
+## MAT 127 (Calculus A)
+    visualize_derivative.m
+    MATLAB GUI to visualize secant lines approximating tangent lines for user defined functions
+
 ## MAT 205 (Linear Algebra)
 
     replace.m
