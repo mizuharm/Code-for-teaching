@@ -16,6 +16,10 @@
     Visualize effects of 2D linear transformation
     of user defined matrix
     
+    visualize_linear_combination.m
+    Visualize how to write a given vector as a linear
+    combination of two fixed vectors on R2
+    
     visualize_eigenvectors.m
     Visualize images of vectors under 2x2 matrix
     transformation
