@@ -23,6 +23,10 @@
     visualize_eigenvectors.m
     Visualize images of vectors under 2x2 matrix
     transformation
+    
+    visualize_span.m
+    Visualize the span of 3 vectors in R3 by plotting
+    random linear combinations of basis vectors
 
 ## MAT 326 (Differential Equations)
 
