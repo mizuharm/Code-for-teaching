@@ -31,7 +31,10 @@
 ## MAT 326 (Differential Equations)
 
     direction_field.m
-    MATLAB code to create direction fields and sample trajectories
+    Create direction fields and sample trajectories
+
+    runOScillator.m
+    Solve second order, constant coefficient, linear ODEs and visualize solutions as mass+spring system
 
 ## MAT 426 (Partial Differential Equations)
     
